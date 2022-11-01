@@ -2,7 +2,7 @@
 
 Gradually, I am going to add my config files which are Windows and Linux files.
 
-> explain about those
+> details
 
 Script of sync is copy from Local to Remote or form Remote to Local.
 
@@ -18,8 +18,8 @@ syncLtoR.* is Local to Remote.
 
 Case of WSL(Linux)
 
->$ sh sync〇to△.sh
+$ sh sync〇to△.sh
 
 Case of windows(Powershell)
 
->$ ./sync〇to△.ps1
+$ ./sync〇to△.ps1
