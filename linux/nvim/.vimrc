@@ -19,9 +19,6 @@ set showcmd
 " 行番号表示
 set number
 
-" カーソルラインの可視化
-"set cursorline
-
 " 対応する括弧の強調表示
 set showmatch
 
@@ -51,11 +48,11 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 set clipboard+=unnamed,unnamedplus
 
 
-set autoindent
+"set autoindent
 "set smartindent
-set expandtab
-set tabstop=4
-set shiftwidth=4
+"set expandtab
+"set tabstop=4
+"set shiftwidth=4
 
 " color scheme
 augroup TransparentBG
