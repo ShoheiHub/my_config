@@ -1,0 +1,18 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+# Lighline
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+# tender
+repo = 'jacoborus/tender.vim'
+
+[[plugins]]
+# deoplete
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+# neonsnippet
+repo = 'Shougo/neosnippet.vim'
