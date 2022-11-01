@@ -33,7 +33,7 @@ set mouse=a
 
 " these make to find Capital and Small literal.
 set ignorecase
-set smartcase
+"set sartcase
 
 " インクリメントサーチ
 set incsearch
@@ -51,10 +51,10 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 set clipboard+=unnamed,unnamedplus
 
 
-set smartindent
-set tabstop=4
-"set autoindent
+set autoindent
+"set smartindent
 set expandtab
+set tabstop=4
 set shiftwidth=4
 
 " color scheme
@@ -62,7 +62,7 @@ augroup TransparentBG
 "  	autocmd!
 "	autocmd Colorscheme * highlight Normal ctermbg=none
 "	autocmd Colorscheme * highlight NonText ctermbg=none
-	autocmd Colorscheme * highlight LineNr ctermbg=none
+"	autocmd Colorscheme * highlight LineNr ctermbg=none
 "	autocmd Colorscheme * highlight Folded ctermbg=none
 "	autocmd Colorscheme * highlight EndOfBuffer ctermbg=none 
 augroup END
@@ -77,7 +77,18 @@ set wildmenu
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
-"key map <exe python>
-nmap <F5> :!python % <Enter>
-nmap <F6> :!gfortran % && ./a.out && rm a.out
+"key map <exe>
+function! Pyfkey()
+    let l:name=expand("%")
+    let l:path=expand("%:p:h")
+    :execute "!cd" l:path ";python" l:name
+endfunction
 
+function! Fortfkey()
+    let l:name=expand("%")
+    let l:path=expand("%:p:h")
+    :execute "!cd" l:path ";gfortran" l:name "&& ./a.out"
+endfunction
+
+nmap <F5> :call Pyfkey() <Enter>
+nmap <F6> :call Fortfkey() <Enter>
