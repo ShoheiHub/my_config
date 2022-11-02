@@ -16,3 +16,11 @@ repo = 'Shougo/deoplete.nvim'
 [[plugins]]
 # neonsnippet
 repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+# airline
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+# airline-theme
+repo = 'vim-airline/vim-airline-themes'
