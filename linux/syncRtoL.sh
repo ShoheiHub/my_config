@@ -1,1 +1,1 @@
-rsync -atuv ~/.config/nvim ./
+rsync -atv ~/.config/nvim ./
