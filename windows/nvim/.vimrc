@@ -57,9 +57,9 @@ set clipboard+=unnamed,unnamedplus
 " color scheme
 augroup TransparentBG
 "  	autocmd!
-"	autocmd Colorscheme * highlight Normal ctermbg=none
+	autocmd Colorscheme * highlight Normal ctermbg=none
 "	autocmd Colorscheme * highlight NonText ctermbg=none
-"	autocmd Colorscheme * highlight LineNr ctermbg=none
+	autocmd Colorscheme * highlight LineNr ctermbg=none
 "	autocmd Colorscheme * highlight Folded ctermbg=none
 "	autocmd Colorscheme * highlight EndOfBuffer ctermbg=none 
 augroup END
@@ -73,6 +73,12 @@ set wildmenu
 
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+
+"operating tabs key map
+nmap <Tab><Up>    :tabnew<CR>
+"nmap <Tab><Down>  :tabclose<CR>
+nmap <Tab><Right> :tabnext<CR>
+nmap <Tab><Left>  :tabNext<CR>
 
 "key map <exe>
 function! Pyfkey()
