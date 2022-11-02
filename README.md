@@ -1,6 +1,9 @@
 # my_config
 
-Gradually, I am going to add my config files which are Windows and Linux files.
+Gradually, I am going to add & modify my config files which are Windows and Linux files.
+
+In latest version,there are no difference between Linux to Windows.
+
 
 > details
 
