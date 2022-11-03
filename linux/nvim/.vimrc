@@ -22,9 +22,6 @@ set number
 " 対応する括弧の強調表示
 set showmatch
 
-" シンタックスハイライトの有効化
-syntax on
-
 " enable mouse
 set mouse=a
 
@@ -47,13 +44,6 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " enable clipboard
 set clipboard+=unnamed,unnamedplus
 
-
-"set autoindent
-"set smartindent
-"set expandtab
-"set tabstop=4
-"set shiftwidth=4
-
 " color scheme
 augroup TransparentBG
 "  	autocmd!
@@ -68,7 +58,6 @@ highlight lineNr ctermfg=229
 hi Comment ctermfg=102
 hi Visual ctermfg=255
 
-set nocompatible
 set wildmenu
 
 set list
@@ -79,6 +68,16 @@ nmap <Tab><Up>    :tabnew<CR>
 "nmap <Tab><Down>  :tabclose<CR>
 nmap <Tab><Right> :tabnext<CR>
 nmap <Tab><Left>  :tabNext<CR>
+
+tmap <Esc><Esc> <C-\><C-n>
+nmap <Tab>t :call Termbot()<CR>
+
+function! Termbot()
+    :sp
+    :wincmd j
+    :terminal
+    :set nonumber
+endfunction
 
 "key map <exe>
 function! Pyfkey()
@@ -95,3 +94,16 @@ endfunction
 
 nmap <F5> :call Pyfkey() <Enter>
 nmap <F6> :call Fortfkey() <Enter>
+
+
+" in case of using vim(not neovim) , remove comment out
+"set autoindent
+"set smartindent
+"set expandtab
+"set tabstop=4
+"set shiftwidth=4
+
+" シンタックスハイライトの有効化
+"syntax on
+
+
