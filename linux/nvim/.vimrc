@@ -71,6 +71,7 @@ nmap <Tab><Left>  :tabNext<CR>
 
 tmap <Esc><Esc> <C-\><C-n>
 nmap <Tab>t :call Termbot()<CR>
+nmap <Tab>e :Texplore<CR>
 
 function! Termbot()
     :sp
@@ -80,20 +81,21 @@ function! Termbot()
 endfunction
 
 "key map <exe>
-function! Pyfkey()
-    let l:name=expand("%")
-    let l:path=expand("%:p:h")
-    :execute "!cd" l:path ";python" l:name
-endfunction
+"function! Pyfkey()
+"    let l:name=expand("%")
+"    let l:path=expand("%:p:h")
+"    :execute "!cd" l:path ";python" l:name
+"endfunction
 
-function! Fortfkey()
-    let l:name=expand("%")
-    let l:path=expand("%:p:h")
-    :execute "!cd" l:path ";gfortran" l:name "&& ./a.out"
-endfunction
+"function! Fortfkey()
+"    let l:name=expand("%")
+"    let l:path=expand("%:p:h")
+"    :execute "!cd" l:path ";gfortran" l:name "&& ./a.out"
+"endfunction
 
-nmap <F5> :call Pyfkey() <Enter>
-nmap <F6> :call Fortfkey() <Enter>
+"nmap <F5> :call Pyfkey() <Enter>
+"nmap <F6> :call Fortfkey() <Enter>
+nmap <F5> :w !python <Enter>
 
 
 " in case of using vim(not neovim) , remove comment out
